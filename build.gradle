@@ -1,0 +1,24 @@
+buildscript {
+    ext.kotlin_version = '2.1.0'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:9.5.0'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.10'
+        classpath 'com.google.gms:google-services:4.4.4'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+
+tasks.register("clean", Delete) {
+    delete layout.buildDirectory
+}

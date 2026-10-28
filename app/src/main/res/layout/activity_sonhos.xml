@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adScreenRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_launcher_transparente">
+
+    <include layout="@layout/toolbar_anuncios" />
+    <include layout="@layout/banner_anuncio" />
+
+    <LinearLayout
+        android:id="@+id/contentArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/sonhos"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/lvSonhos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fastScrollEnabled="true"
+            android:fastScrollAlwaysVisible="true"
+            android:drawSelectorOnTop="false" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adScreenRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_launcher_transparente">
+
+    <include layout="@layout/toolbar_anuncios" />
+    <include layout="@layout/banner_anuncio" />
+
+    <ScrollView
+        android:id="@+id/contentArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sonho_com"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvIndiceS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/significado"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSignificado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/palpite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPalpite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btCompPalpite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/compartilhar_palpite" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/ic_launcher_transparente"
+    android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text='Esta app não tem a intenção de incentivar o jogo do bicho. Apenas divulgar detalhes deste jogo que é mania nacional e que faz parte do nosso folclore, devido as autoridades não terem conseguido impedir a sua prática até os dias de hoje. Esclareço que não arrecado qualquer tipo de jogo nem vendo nada, apenas uso este espaço para dividir análises sobre os resultados divulgados diariamente pela imprensa e que são de conhecimento público. Aqui você encontrará muita informação sobre o jogo do bicho, desde a sua criação em "história" até o resultado da ultima extração.'/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="De acordo"
+        android:id="@+id/btok" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Não mostrar esta aviso novamente."
+        android:id="@+id/cbaviso"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nao recebeu valor"
+        android:id="@+id/informationTextView"
+        android:visibility="invisible" />
+</LinearLayout>

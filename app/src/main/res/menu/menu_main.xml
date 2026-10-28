@@ -1,0 +1,21 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_historia"
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="never"
+        android:title="@string/menu_historia_title"/>
+    <item
+        android:id="@+id/menu_sonhos"
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="never"
+        android:title="@string/menu_sonhos_title"/>
+    <item
+        android:id="@+id/menu_tabela"
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="never"
+        android:title="@string/menu_tabela_title"/>
+
+</menu>

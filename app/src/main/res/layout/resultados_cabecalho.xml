@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/tvdiadasemana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:focusable="false"
+        android:inputType="none"
+        android:textSize="28sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Clique na Data para Consultar Resultados de outros Dias, e no Menu para Livro dos Sonhos" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true">
+
+        <RadioGroup
+            android:id="@+id/rgLoterias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/rbPPT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PPT" android:checked="true" android:onClick="selecionaloteria" />
+            <RadioButton android:id="@+id/rbPTM" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PTM" android:onClick="selecionaloteria" />
+            <RadioButton android:id="@+id/rbPT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PT" android:onClick="selecionaloteria" />
+            <RadioButton android:id="@+id/rbPTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PTV" android:onClick="selecionaloteria" />
+            <RadioButton android:id="@+id/rbPTN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PTN/FED" android:onClick="selecionaloteria" />
+            <RadioButton android:id="@+id/rbCOR" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COR" android:onClick="selecionaloteria" />
+        </RadioGroup>
+    </HorizontalScrollView>
+</LinearLayout>

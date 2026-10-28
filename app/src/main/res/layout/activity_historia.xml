@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://pt.wikipedia.org/wiki/Jogo_do_bicho"
+                    android:id="@+id/tvwilki"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:textColor="#1978f4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A origem do jogo do bicho remonta ao fim do Império e início do período republicano. Jornais da época contam que, para melhorar as finanças do jardim zoológico localizado no bairro da Vila Isabel, que estava em dificuldades financeiras, o senhor de terras e escravos João Batista Viana Drummond criou uma loteria em que o apostador escolhia um entre os 25 bichos do zoológico."
+                    android:id="@+id/textView18" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/jogo_do_bicho_roleta"
+                    android:layout_gravity="left" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cada_bicho_era_representado_por_quatro_n_meros_consecutivos_compreendidos_entre_00_e_99_havia_25_bichos_numerados_de_01_at_25_por_ordem_alfab_tica_os_n_meros_de_00_a_99_correspondiam_aos_25_bichos_conforme_uma_progress_o_aritm_tica_calculando_o_pr_ximo_m_ltiplo_de_quatro_por_exemplo_o_camelo_8_29_32_e_a_vaca_25_97_00_hoje_o_bicho_correspondendo_a_um_n_mero_entre_0000_e_9999_indicado_pelos_dois_d_gitos_finais_ao_final_do_dia_os_organizadores_do_jogo_revelavam_o_nome_do_bicho_vencedor_e_afixavam_o_resultado_num_poste_o_que_at_os_dias_de_hoje_continua_sendo_feito"
+                    android:id="@+id/textView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O jogo do bicho permitia apostas de &quot;simples moedas a tostões furados&quot; numa época em que a recessão tomava conta do Brasil. Essa modalidade de jogo, rapidamente, se alastrou pelo país e tornou-se para o pobre algo comparável à bolsa de valores para os mais abastados. Desse modo, quase sempre &quot;investindo&quot; com poucas moedas, o apostador nunca deixava de &quot;aplicar&quot; na sua &quot;bolsa de valores&quot;, o que deu origem à expressão: &quot;só ganha quem joga&quot;."
+                    android:id="@+id/textView2" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O jogo do bicho é semelhante a uma loteria federal, mas com algumas diferenças: uma delas é que o jogador pode apostar qualquer valor, que muitas vezes é bem acima de suas possibilidades. Quanto maior o valor apostado em uma sequência numérica (milhar, centena, dezena, etc.), maior será o prêmio em caso de acerto. Com essa flexibilidade de apostas, o jogador é livre para escolher pelo menor valor possível o seu número da sorte nas 10 000 chances disponíveis em cada sorteio. Exemplo: um apostador joga um real em uma milhar no primeiro prêmio (conhecido como cabeça por ser a primeira milhar no topo da lista de resultados). Caso acerte ela inteira (os quatro números), ele ganha 3 000 reais (apostas no estado de São Paulo). Se tivesse jogado cinquenta centavos na mesma aposta e acertado, o apostador ganharia 1 500 reais. Toda banca (organização que faz a administração do jogo do bicho) tem uma tabela de valores que são apresentados aos apostadores, tabela essa que tem muito pouca diferença de banca para banca."
+                    android:id="@+id/textView3" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
