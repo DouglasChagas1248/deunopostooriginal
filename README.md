@@ -4,10 +4,12 @@ Aplicativo Android em Kotlin/XML para consultar resultados, tabela e livro dos s
 
 ## Versão atual
 
-- Versão do aplicativo: **1.15** (`versionCode = 15`).
-- Android mínimo: API 23; compilação e alvo: API 36.
+- Versão do aplicativo: **1.16** (`versionCode = 16`).
+- Android mínimo: API 24 (Android 7.0); compilação e alvo: API 36.
 - Gradle Wrapper: 9.8.2; Android Gradle Plugin: 9.5.0.
 - JDK do daemon: JetBrains 21, definido em `gradle/gradle-daemon-jvm.properties`.
+
+A versão 1.16 eleva o SDK mínimo para API 24 para atender ao requisito da Proteção Automática do Google Play.
 
 ## Configuração local
 

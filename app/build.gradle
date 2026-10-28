@@ -22,10 +22,10 @@ android {
 
     defaultConfig {
         applicationId "br.com.dotchagas.deunoposteorig.deunoposteorig"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 36
-        versionCode = 15
-        versionName = "1.15"
+        versionCode = 16
+        versionName = "1.16"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField 'String', 'DP_API_USER', groovy.json.JsonOutput.toJson(apiUser)
