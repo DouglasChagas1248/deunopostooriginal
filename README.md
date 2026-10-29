@@ -4,12 +4,14 @@ Aplicativo Android em Kotlin/XML para consultar resultados, tabela e livro dos s
 
 ## Versão atual
 
-- Versão do aplicativo: **1.16** (`versionCode = 16`).
+- Versão do aplicativo: **1.17** (`versionCode = 17`).
 - Android mínimo: API 24 (Android 7.0); compilação e alvo: API 36.
 - Gradle Wrapper: 9.8.2; Android Gradle Plugin: 9.5.0.
 - JDK do daemon: JetBrains 21, definido em `gradle/gradle-daemon-jvm.properties`.
 
-A versão 1.16 eleva o SDK mínimo para API 24 para atender ao requisito da Proteção Automática do Google Play.
+A versão 1.17 habilita o R8 na compilação de produção para reduzir, otimizar e ofuscar o código, além de remover recursos não utilizados. Isso trata a configuração que produzia o alerta de ofuscação em 0% no Google Play. Os percentuais e a conformidade com os limites de fevereiro de 2027 devem ser confirmados no Play Console após o envio do novo AAB.
+
+A versão 1.16 elevou o SDK mínimo para API 24 para atender ao requisito da Proteção Automática do Google Play.
 
 ## Configuração local
 
@@ -31,9 +33,14 @@ Compilações de debug usam o bloco de anúncios de teste do Google. Compilaçõ
 ```powershell
 .\gradlew.bat :app:assembleDebug :app:assembleDebugAndroidTest :app:testDebugUnitTest :app:lintDebug
 .\gradlew.bat :app:connectedDebugAndroidTest
+.\gradlew.bat :app:bundleRelease :app:assembleRelease :app:lintRelease
 ```
 
 Os testes instrumentados verificam que o banner cabe integralmente, não se sobrepõe à toolbar nem ao conteúdo e deixam capturas em `Android/data/br.com.dotchagas.deunoposteorig.deunoposteorig/files/admob-validation` no dispositivo de teste. Verifique também telas pequenas, fontes ampliadas e as orientações suportadas.
+
+Antes de publicar, teste a compilação de produção otimizada, incluindo a seleção das loterias, consulta por data, livro dos sonhos e notificações. Os métodos chamados por `android:onClick` são preservados pelas regras padrão de `proguard-android-optimize.txt`; não há regras gerais que impeçam a ofuscação do aplicativo inteiro. Guarde os arquivos de `app/build/outputs/mapping/release/`, principalmente `mapping.txt`, para interpretar falhas dessa versão. Ao gerar o AAB pelo Android Studio, selecione a variante `release` e a chave de assinatura de produção.
+
+`OptimizationSmokeInstrumentedTest` verifica os seis botões de seleção de loteria chamados pelo XML e a leitura de significado/palpite do cache SQLite. Para validar o R8, execute também esses testes contra uma compilação `release` otimizada assinada apenas para o dispositivo local de testes; não publique o pacote assinado com a chave de debug.
 
 A compilação e os testes locais não substituem a publicação de uma versão assinada e a revisão do AdMob. O repositório não publica atualizações automaticamente.
 

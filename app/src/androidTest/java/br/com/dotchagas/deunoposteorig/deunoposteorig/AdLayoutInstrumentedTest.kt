@@ -35,16 +35,16 @@ class AdLayoutInstrumentedTest {
             val drawn = CountDownLatch(1)
             val failure = AtomicReference<Throwable?>()
             scenario.onActivity { activity ->
-                val root = activity.findViewById<View>(R.id.adScreenRoot)
-                val slot = activity.findViewById<FrameLayout>(R.id.adContainer)
+                val root = activity.findViewById<View>(activity.testResourceId("adScreenRoot"))
+                val slot = activity.findViewById<FrameLayout>(activity.testResourceId("adContainer"))
                 root.viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
                     override fun onPreDraw(): Boolean {
                         val banner = slot.getChildAt(0) as? AdView
                         if (banner == null || banner.width == 0 || banner.height == 0) return true
                         root.viewTreeObserver.removeOnPreDrawListener(this)
                         try {
-                            val toolbar = activity.findViewById<View>(R.id.toolbarAnuncios)
-                            val content = activity.findViewById<View>(R.id.contentArea)
+                            val toolbar = activity.findViewById<View>(activity.testResourceId("toolbarAnuncios"))
+                            val content = activity.findViewById<View>(activity.testResourceId("contentArea"))
                             assertTrue("Banner overlaps the toolbar", slot.top >= toolbar.bottom)
                             assertTrue("Content overlaps the banner", content.top >= slot.bottom)
                             assertTrue("Content has no usable space", content.height > 0)

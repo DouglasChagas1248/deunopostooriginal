@@ -24,8 +24,8 @@ android {
         applicationId "br.com.dotchagas.deunoposteorig.deunoposteorig"
         minSdk = 24
         targetSdk = 36
-        versionCode = 16
-        versionName = "1.16"
+        versionCode = 17
+        versionName = "1.17"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField 'String', 'DP_API_USER', groovy.json.JsonOutput.toJson(apiUser)
@@ -34,7 +34,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
