@@ -19,13 +19,14 @@ def apiPassword = providers.gradleProperty('DP_API_PASSWORD')
 android {
     namespace 'br.com.dotchagas.deunoposteorig.deunoposteorig'
     compileSdk = 36
+    ndkVersion '28.2.13676358'
 
     defaultConfig {
         applicationId "br.com.dotchagas.deunoposteorig.deunoposteorig"
         minSdk = 24
         targetSdk = 36
-        versionCode = 17
-        versionName = "1.17"
+        versionCode = 18
+        versionName = "1.18"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField 'String', 'DP_API_USER', groovy.json.JsonOutput.toJson(apiUser)
@@ -36,6 +37,9 @@ android {
         release {
             minifyEnabled true
             shrinkResources true
+            ndk {
+                debugSymbolLevel 'SYMBOL_TABLE'
+            }
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -55,6 +59,12 @@ android {
 }
 
 dependencies {
+    constraints {
+        implementation('androidx.datastore:datastore-core:1.2.1') {
+            version { strictly '1.2.1' }
+            because 'DataStore 1.2.1 provides the native symbol tables required for Play crash reports'
+        }
+    }
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
